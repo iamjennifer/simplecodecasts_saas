@@ -21,6 +21,11 @@ class ProfilesController < ApplicationController
         end
     end
     
+    def edit
+       @user = User.find( params[:user_id] ) 
+       @profile = @user.profile
+    end
+    
     #whenever you are trying thing from a public form into your db, you need to white list them
     private
     def profile_params

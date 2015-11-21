@@ -16,6 +16,7 @@
                     <%= link_to "Edit", "#", class:"btn btn-primary btn-lg btn-block" %>
                     <%= link_to "View", user_path(current_user), class:"btn btn-primary btn-lg btn-block" %>
                 <% else %>
+                    <p>Create your profile so that you can share your information with the community</p>
                     <%= link_to "Create Profile", new_user_profile_path(current_user), class:"btn btn-primary btn-lg btn-block" %>
                 <% end %>
             </div>

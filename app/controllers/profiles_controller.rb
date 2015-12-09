@@ -44,7 +44,7 @@ class ProfilesController < ApplicationController
     #whenever you are trying thing from a public form into your db, you need to white list them
     private
     def profile_params
-        params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description)
+        params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
     end
     
     def only_current_user

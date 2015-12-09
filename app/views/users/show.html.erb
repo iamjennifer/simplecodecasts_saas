@@ -1,4 +1,6 @@
-<%= @user %><br />
+<!--to show user's number<%= @user %><br />-->
+
+<%= image_tag @user.profile.avatar.url %>
 
 <%= @user.profile.first_name %> <%= @user.profile.last_name %>
 <%= @user.profile.job_title %><br />

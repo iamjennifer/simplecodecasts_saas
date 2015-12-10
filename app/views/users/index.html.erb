@@ -1,1 +1,38 @@
-List all of our users
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <ul class="list-unstyled">
+            <% @users.each do |user| %>
+                <!-- if user has a profile, then print it out -->
+               
+                    <% if user.profile %>
+                        
+                        <li>
+                            <!-- alternating a class called white -->
+                            <div class="well row <%= cycle('white-bg','') %>" >
+                                <div class="col-sm-4 text-center">
+                                    
+                                    <!-- if user have avatar -->
+                                    <% if user.profile.avatar %>
+                                        <!-- go to the user profile page -->
+                                        <%= link_to user do %>
+                                            <!-- paperclip automatically generate the thumbnail size for you -->
+                                            <%= image_tag user.profile.avatar.url(:thumb) %>
+                                        <% end %>
+                                    <% end %>
+                                    
+                                </div>
+                                <div>
+                                    <%= link_to user do %>
+                                        <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
+                                    <% end %>
+                                    <p><%= user.profile.job_title %></p>
+                                </div>
+                            </div>
+                        </li>
+                    <% end %>
+               
+            <% end %>
+        </ul>
+    </div>
+
+</div>

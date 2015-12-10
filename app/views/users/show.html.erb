@@ -18,7 +18,7 @@
         
         
         <!--you can add true # in between if and current_user for testing if the condition is true-->
-        <% if true #current_user.plan_id == 2 %>
+        <% if current_user.plan_id == 2 %>
             <div class="well profile-block contact-info">
                 <h3>Contact Info</h3>
                 <%= @user.profile.phone_number %><br />
